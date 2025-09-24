@@ -1,6 +1,11 @@
 {
   "name": "currency-codes",
   "types": "index.d.ts",
+  "type": "module",
+  "author": {
+    "name": "winterrdog",
+    "email": "winterrdog@protonmail.ch"
+  },
   "version": "2.2.0",
   "description": "Lookup currency codes based on ISO 4217",
   "repository": "git://github.com/winterrdog/currency-codes",
@@ -14,13 +19,8 @@
     "codes",
     "lookup"
   ],
-  "dependencies": {
-    "first-match": "~0.0.1",
-    "nub": "~0.0.0"
-  },
   "devDependencies": {
-    "@gouch/to-title-case": "^2.2.1",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.6.2"
   },
   "scripts": {
     "test": "node test.js",
