@@ -2,13 +2,13 @@
 
 A node.js module to list and work on currency codes based on the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) standard.
 
-	npm install currency-codes
+    npm install currency-codes
 
 ## code('EUR')
 
-``` js
-var cc = require('currency-codes');
-console.log(cc.code('EUR'));
+```js
+import cc from "currency-codes";
+console.log(cc.code("EUR"));
 
 /*
 {
@@ -28,8 +28,8 @@ console.log(cc.code('EUR'));
 
 ## number(967)
 
-``` js
-var cc = require('currency-codes');
+```js
+import cc from "currency-codes";
 console.log(cc.number(967));
 
 /*
@@ -44,9 +44,9 @@ console.log(cc.number(967));
 
 ## country('colombia')
 
-``` js
-var cc = require('currency-codes');
-console.log(cc.country('colombia'));
+```js
+import cc from "currency-codes";
+console.log(cc.country("colombia"));
 
 /*
 [
@@ -69,8 +69,8 @@ console.log(cc.country('colombia'));
 
 ## codes()
 
-``` js
-var cc = require('currency-codes');
+```js
+import cc from "currency-codes";
 console.log(cc.codes());
 
 /*
@@ -86,8 +86,8 @@ console.log(cc.codes());
 
 ## numbers()
 
-``` js
-var cc = require('currency-codes');
+```js
+import cc from "currency-codes";
 console.log(cc.numbers());
 
 /*
@@ -103,8 +103,8 @@ console.log(cc.numbers());
 
 ## countries()
 
-``` js
-var cc = require('currency-codes');
+```js
+import cc from "currency-codes";
 console.log(cc.countries());
 
 /*
@@ -118,8 +118,8 @@ console.log(cc.countries());
 
 ## data
 
-``` js
-var data = require('currency-codes/data');
+```js
+import data from "currency-codes/data";
 console.log(data);
 
 /*
@@ -143,7 +143,7 @@ console.log(data);
 ## publishDate
 
 ```js
-var cc = require('currency-codes');
+import cc from "currency-codes";
 
 console.log(cc.publishDate);
 
