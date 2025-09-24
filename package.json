@@ -28,5 +28,8 @@
     "iso:ingest-xml": "node scripts/ingest-iso-4217-xml.js",
     "iso": "npm run iso:fetch-xml && npm run iso:ingest-xml"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT"
 }
