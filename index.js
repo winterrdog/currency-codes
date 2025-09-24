@@ -1,60 +1,75 @@
-var first = require('first-match');
-var nub = require('nub');
-var data = require('./data');
-var publishDate = require('./iso-4217-publish-date');
+// @ts-check
+import nub from "./nub.js";
+import data from "./data.js";
+import publishDate from "./iso-4217-publish-date.js";
 
-var code = function(code) {
+const code = function (code) {
   code = code.toUpperCase();
-
-  return first(data, function(c) {
+  const matched = data.find(function (c) {
     return c.code === code;
   });
+  return matched || null;
 };
-var country = function(country) {
-  country = country.toLowerCase();
 
-  return data.filter(function(c) {
-    return (c.countries.map(function(c) { return c.toLowerCase(); } ) || []).indexOf(country) > -1;
+const country = function (country) {
+  country = country.toLowerCase();
+  return data.filter(function (c) {
+    return (
+      (
+        c.countries.map(function (c) {
+          return c.toLowerCase();
+        }) || []
+      ).indexOf(country) > -1
+    );
   });
 };
-var number = function(number) {
-  return first(data, function(c) {
+const number = function (number) {
+  const matched = data.find(function (c) {
     return c.number === String(number);
   });
+  return matched || null;
 };
-var codes = function() {
-  return data.map(function(c) {
+const codes = function () {
+  return data.map(function (c) {
     return c.code;
   });
 };
-var numbers = function() {
-  var items = data.map(function(c) {
+const numbers = function () {
+  const items = data.map(function (c) {
     return c.number;
   });
 
   // handle cases where number is undefined (e.g. XFU and XBT)
-  return items.filter(function(n) {
+  return items.filter(function (n) {
     if (n) {
       return n;
     }
   });
 };
-var countries = function() {
-  var m = data
-    .filter(function(c) {
+const countries = function () {
+  const m = data
+    .filter(function (c) {
       return c.countries;
     })
-    .map(function(c) {
+    .map(function (c) {
       return c.countries;
     });
   return nub(Array.prototype.concat.apply([], m));
 };
 
-exports.code = code;
-exports.country = country;
-exports.number = number;
-exports.codes = codes;
-exports.numbers = numbers;
-exports.countries = countries;
-exports.publishDate = publishDate;
-exports.data = data;
+const _code = code;
+export { _code as code };
+const _country = country;
+export { _country as country };
+const _number = number;
+export { _number as number };
+const _codes = codes;
+export { _codes as codes };
+const _numbers = numbers;
+export { _numbers as numbers };
+const _countries = countries;
+export { _countries as countries };
+const _publishDate = publishDate;
+export { _publishDate as publishDate };
+const _data = data;
+export { _data as data };
