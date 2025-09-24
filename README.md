@@ -1,6 +1,6 @@
 # currency-codes
 
-A node.js module to list and work on currency codes based on the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) standard.
+A node.js module to list and work on currency codes based on the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) standard. This package has zero dependencies therefore it is lightweight if you care about small bundle sizes.
 
     npm install currency-codes
 
