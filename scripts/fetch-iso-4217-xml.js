@@ -23,6 +23,8 @@ async function downloadIso() {
     process.exit(1);
   }
 
+  return;
+
   // =======
   // HELPERS
   // =======
