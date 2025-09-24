@@ -1,10 +1,10 @@
 /*
 	Follows ISO 4217, https://www.iso.org/iso-4217-currency-codes.html
 	See https://www.currency-iso.org/dam/downloads/lists/list_one.xml
-	Data last updated 2024-06-25
+	Data last updated 2025-05-12
 */
 
-module.exports = [
+const data = [
   {
     "code": "AED",
     "number": "784",
@@ -39,16 +39,6 @@ module.exports = [
     "currency": "Armenian Dram",
     "countries": [
       "Armenia"
-    ]
-  },
-  {
-    "code": "ANG",
-    "number": "532",
-    "digits": 2,
-    "currency": "Netherlands Antillean Guilder",
-    "countries": [
-      "Curaçao",
-      "Sint Maarten (Dutch Part)"
     ]
   },
   {
@@ -345,15 +335,6 @@ module.exports = [
     "currency": "Costa Rican Colon",
     "countries": [
       "Costa Rica"
-    ]
-  },
-  {
-    "code": "CUC",
-    "number": "931",
-    "digits": 2,
-    "currency": "Peso Convertible",
-    "countries": [
-      "Cuba"
     ]
   },
   {
@@ -1503,6 +1484,15 @@ module.exports = [
     ]
   },
   {
+    "code": "XAD",
+    "number": "396",
+    "digits": 2,
+    "currency": "Arab Accounting Dinar",
+    "countries": [
+      "Arab Monetary Fund"
+    ]
+  },
+  {
     "code": "XAF",
     "number": "950",
     "digits": 0,
@@ -1584,6 +1574,16 @@ module.exports = [
       "Saint Kitts and Nevis",
       "Saint Lucia",
       "Saint Vincent and the Grenadines"
+    ]
+  },
+  {
+    "code": "XCG",
+    "number": "532",
+    "digits": 2,
+    "currency": "Caribbean Guilder",
+    "countries": [
+      "Curaçao",
+      "Sint Maarten (Dutch Part)"
     ]
   },
   {
@@ -1715,3 +1715,4 @@ module.exports = [
     ]
   }
 ];
+export default data;
