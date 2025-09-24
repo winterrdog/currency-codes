@@ -1,12 +1,12 @@
 {
-  "name": "currency-codes",
+  "name": "@winterrdog/currency-codes",
   "types": "index.d.ts",
   "type": "module",
   "author": {
     "name": "winterrdog",
     "email": "winterrdog@protonmail.ch"
   },
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Lookup currency codes based on ISO 4217",
   "repository": "git://github.com/winterrdog/currency-codes",
   "keywords": [
