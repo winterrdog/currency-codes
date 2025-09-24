@@ -6,7 +6,7 @@
     "name": "winterrdog",
     "email": "winterrdog@protonmail.ch"
   },
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Lookup currency codes based on ISO 4217",
   "repository": "git://github.com/winterrdog/currency-codes",
   "keywords": [
