@@ -3,7 +3,7 @@
   "types": "index.d.ts",
   "version": "2.2.0",
   "description": "Lookup currency codes based on ISO 4217",
-  "repository": "git://github.com/freeall/currency-codes.git",
+  "repository": "git://github.com/winterrdog/currency-codes",
   "keywords": [
     "iso4217",
     "iso",
@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "@gouch/to-title-case": "^2.2.1",
-    "axios": "^0.19.2",
     "xml2js": "^0.4.23"
   },
   "scripts": {

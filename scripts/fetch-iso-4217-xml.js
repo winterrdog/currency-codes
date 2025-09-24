@@ -1,37 +1,50 @@
-const path = require('path');
-const fs = require('fs');
-const axios = require('axios');
+// @ts-check
 
-async function download(url, path) {
-  const writer = fs.createWriteStream(path);
+import { Readable } from "node:stream";
+import { createWriteStream } from "node:fs";
 
-  const response = await axios({
-    url,
-    method: 'GET',
-    responseType: 'stream'
-  });
+downloadIso();
 
-  response.data.pipe(writer);
-
-  return new Promise((resolve, reject) => {
-    writer.on('finish', resolve);
-    writer.on('error', reject);
-  });
-}
+// ===============
+// IMPLEMENTATION
+// ===============
 
 async function downloadIso() {
-  const url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml';
-  const path = 'iso-4217-list-one.xml';
+  var path = "iso-4217-list-one.xml";
+  var url =
+    "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml";
 
   try {
-    await download(url, path);
-
-    console.log('Downloaded ' + url + ' to ' + path);
+    await fetchAndSaveCurrencyInfo(url, path);
+    console.log("Downloaded " + url + " to " + path);
   } catch (e) {
-    console.error('Error downloading ' + url);
+    console.error("Error downloading " + url);
     console.error(e);
     process.exit(1);
   }
-}
 
-downloadIso();
+  // =======
+  // HELPERS
+  // =======
+
+  // @ts-ignore
+  async function fetchAndSaveCurrencyInfo(url, path) {
+    return fetch(url).then(async function processFetchResponse(response) {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      } else {
+        // send the response body to the file
+        const writer = createWriteStream(path);
+        // @ts-ignore
+        const readable = Readable.fromWeb(response.body);
+        readable.pipe(writer);
+
+        await new Promise(function (resolve, reject) {
+          // @ts-ignore
+          writer.on("finish", resolve);
+          writer.on("error", reject);
+        });
+      }
+    });
+  }
+}
