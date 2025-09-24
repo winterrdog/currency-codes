@@ -1,4 +1,4 @@
-declare module "currency-codes" {
+declare module "@winterrdog/currency-codes" {
   export interface CurrencyCodeRecord {
     code: string;
     number: string;

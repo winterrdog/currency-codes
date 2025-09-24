@@ -1,4 +1,4 @@
-# currency-codes
+# @winterrdog/currency-codes
 
 A node.js module to list and work on currency codes based on the [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217) standard. This package has zero dependencies therefore it is lightweight if you care about small bundle sizes.
 
@@ -159,16 +159,16 @@ Fetch the latest copy of ISO-4217 from the [maintainer](https://www.iso.org/iso-
 ```bash
 $ npm run iso
 
-> currency-codes@2.1.0 iso
+> @winterrdog/currency-codes@2.1.0 iso
 > npm run iso:fetch-xml && npm run iso:ingest-xml
 
 
-> currency-codes@2.1.0 iso:fetch-xml
+> @winterrdog/currency-codes@2.1.0 iso:fetch-xml
 > node scripts/fetch-iso-4217-xml.js
 
 Downloaded https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml to iso-4217-list-one.xml
 
-> currency-codes@2.1.0 iso:ingest-xml
+> @winterrdog/currency-codes@2.1.0 iso:ingest-xml
 > node scripts/ingest-iso-4217-xml.js
 
 Ingested iso-4217-list-one.xml into data.js

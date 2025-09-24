@@ -1,4 +1,4 @@
-name: Publish currency-codes to npm
+name: Publish @winterrdog/currency-codes to npm
 
 on:
   push:
